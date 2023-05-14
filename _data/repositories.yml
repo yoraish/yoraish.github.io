@@ -1,12 +1,9 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - yoraish
 
 github_repos:
-  - alshedivat/al-folio
-  - twbs/bootstrap
-  - jekyll/jekyll
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - jpswalsh/academicons
-  - mathjax/MathJax
+  - yoraish/lidar_bot
+  - yoraish/botello
+  - castacks/tartanairpy
+  - contagon/NeRFish
+  - yoraish/robot_utils
