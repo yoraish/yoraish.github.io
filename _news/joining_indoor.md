@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I have joined Indoor Robotics as a Robotics Algorithm Engineer.
+I have joined <a href="https://www.indoor-robotics.com/"> Indoor Robotics </a> as a Robotics Algorithm Engineer.
