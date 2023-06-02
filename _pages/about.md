@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Ph.D. Student at <a href="https://www.ri.cmu.edu/">The Robotics Institute </a>, Carnegie Mellon University. <a href="https://mitathletics.com/sports/mens-track-and-field/roster/yorai-shaoul/8900"> MIT 21' </a>.
+subtitle: Ph.D. Student at <a href="https://www.ri.cmu.edu/">The Robotics Institute </a>, Carnegie Mellon University. <a href="https://mitathletics.com/sports/mens-track-and-field/roster/yorai-shaoul/8900"> MIT 21'</a>. [<strong><a href="https://yoraish.wordpress.com/">Old website link</a></strong>]
 
 profile:
   align: right
@@ -16,15 +16,15 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Hi hello. <strong><a href="https://yoraish.wordpress.com/">Old website link</a>.</strong>
+Hi hello! 
 
 I am a Ph.D. student in robotics. 
-<!-- I am fortunate to be advised by 
+I am fortunate to be advised by 
 Professor <a href="http://www.cs.cmu.edu/~maxim/"> Maxim Likhachev </a>,
 and 
-Professor <a href="https://jiaoyangli.me/"> Jiaoyang Li </a>. -->
-I had the pleasure of working with 
-<a href="https://www.ri.cmu.edu/ri-faculty/sebastian-scherer/"> Professor Sebastian Scherer  </a>
+Professor <a href="https://jiaoyangli.me/"> Jiaoyang Li </a>.
+I had the pleasure of working with Professor
+<a href="https://www.ri.cmu.edu/ri-faculty/sebastian-scherer/"> Sebastian Scherer  </a>
 during my first year at CMU. We focused on applying deep learning for visual odometry estimation.
 
 Previously, I was a student at MIT working in CSAIL at 
