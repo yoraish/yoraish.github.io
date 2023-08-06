@@ -22,7 +22,7 @@ I am a Ph.D. student in robotics.
 I am fortunate to be advised by 
 Professor <a href="http://www.cs.cmu.edu/~maxim/"> Maxim Likhachev </a>,
 and 
-Professor <a href="https://jiaoyangli.me/"> Jiaoyang Li </a>.
+Professor <a href="https://jiaoyangli.me/"> Jiaoyang Li </a>. We currently work on planning and learning in multi-agent settings.
 I had the pleasure of working with Professor
 <a href="https://www.ri.cmu.edu/ri-faculty/sebastian-scherer/"> Sebastian Scherer  </a>
 during my first year at CMU. We focused on applying deep learning for visual odometry estimation.
@@ -34,5 +34,4 @@ Previously, I was a student at MIT working in CSAIL at
 <a href="https://www.aboutamazon.com/news/tag/robotics" >Amazon Robotics</a>, and 
 <a href="https://www.therobotreport.com/optimus-ride-acquired-by-magna/" >Optimus Ride</a>.
 
-### Robot Motivation
-I am excited by a future where robot teams aid humans in transportation, agriculture, logistics, and other domains. To make this a reality, we need algorithms that scale better in dimension and in system-size. My focus is on developing algorithms that utilize geometric principles, multimodal deep learning, and planning on graphs for improving single- and multi-agent robot systems operating in the real world. 
+<!-- Robot teams aid humans in transportation, agriculture, logistics, and other domains. To make this a reality, we need algorithms that scale better in dimension and in system-size. My focus is on developing algorithms that utilize geometric principles, multimodal deep learning, and planning on graphs for improving single- and multi-agent robot systems operating in the real world.  -->
