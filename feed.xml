@@ -1,3 +1,204 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://yoraish.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://yoraish.com/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-08-06T01:38:47+00:00</updated><id>https://yoraish.com/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
-</subtitle><entry><title type="html">Welcome Aboard!</title><link href="https://yoraish.com/blog/2023/welcome/" rel="alternate" type="text/html" title="Welcome Aboard!" /><published>2023-05-14T14:14:00+00:00</published><updated>2023-05-14T14:14:00+00:00</updated><id>https://yoraish.com/blog/2023/welcome</id><content type="html" xml:base="https://yoraish.com/blog/2023/welcome/"><![CDATA[<h1 id="welcome-aboard">Welcome Aboard!</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://yoraish.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://yoraish.com/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-08-19T22:26:04+00:00</updated><id>https://yoraish.com/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+</subtitle><entry><title type="html">Robotics Engineer, A Recipe (and how to prepare for interviews)</title><link href="https://yoraish.com/blog/2023/robotics-map/" rel="alternate" type="text/html" title="Robotics Engineer, A Recipe (and how to prepare for interviews)" /><published>2023-08-19T14:14:00+00:00</published><updated>2023-08-19T14:14:00+00:00</updated><id>https://yoraish.com/blog/2023/robotics-map</id><content type="html" xml:base="https://yoraish.com/blog/2023/robotics-map/"><![CDATA[<p>I feel extremely fortunate to have had the chance to work with multiple robotics engineering teams in the past few years. Throughout the process of applying and interviewing for these positions, and of course developing and implementing algorithms in the real world, I have gotten extensive advice from my mentors and colleagues. After some time I have begun to see trends in these pieces of advice, and I thought it could be useful to to write them down and share them with, well, with you.</p>
+
+<h3 id="if-you-do-not-want-to-read-this-but-you-do-want-to-do-robotics-engineering-then">If you do not want to read this, but you do want to do robotics engineering, then</h3>
+<p>Then just choose a robotics project, and go make it. You’ll learn a ton and hopefully have some fun too. I feel like if you have the time and motivation then there is no better way to get a deep understanding of robotics systems other than creating them.</p>
+
+<h3 id="if-you-do-though">If you do, though</h3>
+
+<p>Then let’s get into more details. I have divided this post into two parts.</p>
+
+<p>The first part is the <strong>what</strong>. This is the <em>stuff</em>  that would hopefully give you a sufficiently broad view of a robotic system. Besides needing this kind of perspective, in my opinion, to build robust systems, interviewers will also probably want you to demonstrate that you have it in a basic level. The list below could be overwhelming – remember tht each role would require knowledge of a different subset of topics, so pick and choose what you think is relevant for you :).</p>
+
+<p>The second part is the <strong>how</strong>. This will be a collection of tips and tricks that I have found useful in the past when I was being interviewed.</p>
+
+<p>None of the lists to follow are comprehensive. Hopefully they could point you in the right direction, though!</p>
+
+<h2 id="the-what-algorithms-and-concepts">The What: Algorithms and Concepts</h2>
+
+<p>I like seeing the different topics that comprise the field of robotics as a hierarchy. Going from the least “abstract” to the most, I tend to put topics in the following high-level buckets:</p>
+
+<ul>
+  <li><strong>Controls</strong>: what voltage should motors receive in order for a robot to track some predefined trajectory. What are common methods for using sensory feedback and reacting to it?</li>
+  <li><strong>Planning</strong>: how can we find a sequence of actions that will take a robot from point A to point B. How can we do this in a way that is dynamically-sound, and robust to uncertainty and to the presence of other agents and obstacles?</li>
+  <li><strong>Localization and Mapping</strong>: how can we build a map of the environment and localize a robot within it. With this information, we could plan paths from a start location on a map to a goal location on the map and control the robot to follow it.</li>
+  <li><strong>Learning, Perception, and Higher Level Scene Understanding</strong>: robots can be seen as data-collection machines. Can robots learn to improve themselves from the data they collect? Yes, they can. And learning algorithms can be applied to improve perception, planning, and control algorithms (and more!).</li>
+</ul>
+
+<p>Each of these topics is extremely broad. Here are some subtopics and algorithms you could familiarize yourself with to get a grasp of each of these topics. Their order is somewhat arbitrary, I see this as a bit of a cookbook recipe and encourage you to tweak it as you need!</p>
+
+<ul>
+  <li><strong>Controls</strong>
+    <ul>
+      <li>PID</li>
+      <li>Pure Pursuit</li>
+      <li>State space and state space models</li>
+      <li>Model predictive control</li>
+      <li>Trajectory optimization</li>
+    </ul>
+  </li>
+  <li><strong>Planning</strong>
+    <ul>
+      <li>Graph based methods:
+        <ul>
+          <li>Dijkstra’s Algorithm</li>
+          <li>A*</li>
+          <li>BFS</li>
+          <li>DFS</li>
+          <li>ARA*, MHA*, and many others</li>
+        </ul>
+      </li>
+      <li>Sampling based methods:
+        <ul>
+          <li>RRT (Rapidly exploring Random Trees)</li>
+          <li>Bidirectional RRT</li>
+          <li>RRT*</li>
+          <li>RRG (Rapidly exploring Random Graphs)</li>
+          <li>PRM (probabilistic roadmaps)</li>
+          <li>PRM*</li>
+        </ul>
+      </li>
+      <li>And if you are cool, multi agent planning algorithms (the following are graph-based)
+        <ul>
+          <li>Conflict Based Search (CBS)</li>
+          <li>ECBS (Enhanced CBS)</li>
+          <li>MAPF-LNS (Multi-agent path finding with large neighborhood search)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Localization (and state estimation)</strong>
+    <ul>
+      <li>Different map representations
+        <ul>
+          <li>grid occupancy maps, voxel grids, graphs of convex sets, meshes, etc.</li>
+        </ul>
+      </li>
+      <li>Scan matching (2D and 3D pointclouds, often using ICP with laser scans)</li>
+      <li>ICP (Iterative Closest Point)</li>
+      <li>Ray tracing</li>
+      <li>Particle filter</li>
+      <li><strong>Kalman Filters</strong> (and the extended Kalman filter for extra credit)</li>
+      <li>Fundamentals of odometry</li>
+    </ul>
+  </li>
+  <li><strong>Mapping</strong>
+    <ul>
+      <li>SLAM (includes localization, of course). Knowledge of the two components of general SLAM systems: motion model and sensor model.</li>
+      <li>Online SLAM (Full-SLAM) and offline slam.</li>
+      <li>Extra: pose-graph optimization, KF-based SLAM vs Smoothing based SLAM. Know of semantic SLAM, visual slam, and more traditional SLAM. Hector-SLAM, and Cartographer.</li>
+      <li>Octomapping/gmapping.</li>
+    </ul>
+  </li>
+  <li><strong>Learning, Perception, and Higher Level Scene Understanding</strong>
+    <ul>
+      <li>Neural Networks
+        <ul>
+          <li>Convolutional neural networks</li>
+          <li>Activation layers</li>
+          <li>Loss functions</li>
+          <li>Backpropagation</li>
+          <li>Gradient descent</li>
+          <li>Reinforcement learning, supervised learning, semi-supervised learning, unsupervised learning</li>
+          <li>And to be trendy, large language models and transformers.</li>
+        </ul>
+      </li>
+      <li>Perception and learning
+        <ul>
+          <li>3D geometry
+            <ul>
+              <li>Shape estimation</li>
+              <li>Place recognition</li>
+              <li>Manipulation example: grasp computation</li>
+            </ul>
+          </li>
+          <li>Computer vision
+            <ul>
+              <li>Segmentation</li>
+              <li>Detection</li>
+              <li>Visual odometry</li>
+              <li>Optical flow,</li>
+              <li>Tracking)</li>
+              <li>Camera calibration (intrinsics, extrinsics)</li>
+              <li>Epipolar geometry (essential matrix, fundamental matrix.)</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>We must also remember our fundamentals:</p>
+
+<ul>
+  <li>A tad ot <strong>physics</strong>:
+    <ul>
+      <li>Kinematics</li>
+      <li>Free-fall mechanics (accelerations)</li>
+      <li>\(F = ma\) (sounds silly but this is important for going between talking in terms of velocity derivatives and energy).</li>
+      <li>Forward and inverse kinematics (mostly for manipulation).</li>
+    </ul>
+  </li>
+  <li>
+    <p>A bit of <strong>math</strong>:</p>
+
+    <ul>
+      <li>Reference frames and rigid transformations</li>
+      <li>Pseudo-inverse</li>
+      <li>SVD</li>
+      <li>Eigenvalues and eigenvectors</li>
+      <li>Optimization</li>
+    </ul>
+  </li>
+</ul>
+
+<p>If you know all of that, you’ll be a… good theoretical researcher. Undoubtedly, you’ll be able to talk to many folks in the field and be up to speed with their work. However, to transform yourself to a great <em>engineer</em>, you’ll also need some hands-on experience with the common tools teams use to apply all of these theoretical concepts in real-world systems.</p>
+
+<h2 id="the-what-software-tools">The What: Software Tools</h2>
+
+<p>Let’s face it. Most robotics engineers are specialized software engineers. We (they) spend much of our (their) time coding in a collaborative environment. Besides common software engineering tools, there are a few tools that are specific to robotics that you may benefit from being familiar with. Here are some of them (alongside the common tools):</p>
+
+<ul>
+  <li>Robot Operation System (ROS)
+    <ul>
+      <li>Topics, services, rosbags and analysis (shoutout to plotjuggler)</li>
+    </ul>
+  </li>
+  <li>Embedded systems, micro-controllers, and generally small computers (e.g. Raspberry Pis and Nvidia Jetsons)
+    <ul>
+      <li>When we deploy algorithms, we don’t often get to run them on our personal computers but rather on some other, usually weaker and smaller, computer on board the robot.</li>
+      <li>SSH, and working headless.</li>
+    </ul>
+  </li>
+  <li>It may often come in handy to be able to design hardware parts in CAD. After all, we work on physical systems here that may need modifications or additions.</li>
+  <li>Git and GitHub</li>
+  <li>Python, especially if you are working in machine learning. In this case, PyTorch or Tensorflow are a must. Pytorch3D if you work on, well, 3D. In this case also Open3D (Python and C++) and PCL(C++) could be nice.</li>
+  <li>C++ for real-time systems.</li>
+</ul>
+
+<h2 id="the-how-interviewing-rules-of-thumb">The How: Interviewing Rules of Thumb</h2>
+
+<p>Before you get to the stage of being interviewed at all, I would try to figure out what kinds of topics you’ll be interacting with in your role or field of study. Once you know that, brush up on relevant knowledge and <strong>implement the algorithms</strong> that are related to it. I find <strong>learning by doing</strong> to be extremely effective (and fun!). Some interviewers like asking for coding-challenges. Either on a board or via some online resource like LeetCode or HackerRank. Make sure to practice those challenges too if you think there is a chance that you’ll be asked to complete one. Finally, practice the “expected” question. “Tell me about yourself,” “tell me about a project you have worked on and your part in it,” “tell me about a challenging time in your professional life,” etc., are all questions you should be able to answer in your sleep (or right after waking up – that would be a bit less creepy). Be concise and confident. I like treating interviews as friendly conversations where the interviewer is genuinely curious to know more about you. So if they are so interested in you, how could you not tell them? :)</p>
+
+<p>In a technical interview, I follow a few simple rules of thumb:</p>
+
+<ul>
+  <li>When asked to come up with a solution to a problem,
+    <ul>
+      <li>Communicate your thoughts! Communicat your assumptions!</li>
+      <li>Communicating your assumption about the problem shows that you are communicating well and would also help you to understand the problem better. Literally restating the problem back to the interviewer is good. If you are unsure about something, ask for clarification. [This was introduced to me by some Google employees.]</li>
+      <li>As you formulate your solution, always start with the simplest solution you can find. Once you get there, ask if the interviewer would like you to improve on the naive solution.  [This was also introduced to me by some Google employees.]</li>
+      <li>I find it better to speak out my thoughts instead of thinking silently. I feel like it keeps the interviewer engaged and shows that you have a clear line of thoughts.</li>
+    </ul>
+  </li>
+  <li>When asked to describe a project,
+    <ul>
+      <li>Know the tools you have used before. Whether it is YOLO, Octomapping, GTSAM, some other deep learning models or algorithms, make sure you know how they work. You don’t have to be familiar with all the details, but definitely understand the bigger picture. If asked why you chose those tools instead of others, be able to justify your choices.</li>
+      <li>If you worked on a team, be able to describe your part in detail.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>And that’s all for today! These are my quick thoughts on the <strong>what</strong> and <strong>how</strong> of robotics interviews and engineering. This post is a bit of a thought-dump – I hope it would at the very least direct you towards some helpful keywords :robot:.</p>]]></content><author><name></name></author><category term="industry" /><summary type="html"><![CDATA[Some thoughts and observations from working and interviewing for robotics engineering teams.]]></summary></entry><entry><title type="html">Welcome Aboard!</title><link href="https://yoraish.com/blog/2023/welcome/" rel="alternate" type="text/html" title="Welcome Aboard!" /><published>2023-05-14T14:14:00+00:00</published><updated>2023-05-14T14:14:00+00:00</updated><id>https://yoraish.com/blog/2023/welcome</id><content type="html" xml:base="https://yoraish.com/blog/2023/welcome/"><![CDATA[<h1 id="welcome-aboard">Welcome Aboard!</h1>
 <p>This is the first post in the new website. Previously, this website was hosted <a href="https://yoraish.wordpress.com"> here <a></a></a></p>]]></content><author><name></name></author><category term="random" /><summary type="html"><![CDATA[A new website a new post.]]></summary></entry></feed>
