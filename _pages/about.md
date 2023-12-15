@@ -2,7 +2,9 @@
 layout: about
 title: about
 permalink: /
-subtitle: Ph.D. Student at <a href="https://www.ri.cmu.edu/">The Robotics Institute </a>, Carnegie Mellon University. <a href="https://mitathletics.com/sports/mens-track-and-field/roster/yorai-shaoul/8900"> MIT 21'</a>. [<strong><a href="https://yoraish.wordpress.com/">Old website link</a></strong>]
+# subtitle: Ph.D. Student at <a href="https://www.ri.cmu.edu/">The Robotics Institute </a>, Carnegie Mellon University. <a href="https://mitathletics.com/sports/mens-track-and-field/roster/yorai-shaoul/8900"> MIT 21'</a>. [<strong><a href="https://yoraish.wordpress.com/">Old website link</a></strong>]
+
+subtitle: [<strong><a href="https://yoraish.wordpress.com/">Old website link</a></strong>]
 
 profile:
   align: right
@@ -18,16 +20,15 @@ social: true  # includes social icons at the bottom of the page
 
 Hi hello! 
 
-I am a Ph.D. student in robotics. 
-I am fortunate to be advised by 
+I am Ph.D. Student at <a href="https://www.ri.cmu.edu/">The Robotics Institute </a>, Carnegie Mellon University. I am fortunate to be advised by 
 Professor <a href="http://www.cs.cmu.edu/~maxim/"> Maxim Likhachev </a>,
 and 
 Professor <a href="https://jiaoyangli.me/"> Jiaoyang Li </a>. We currently work on planning and learning in multi-agent settings.
-I had the pleasure of working with Professor
-<a href="https://www.ri.cmu.edu/ri-faculty/sebastian-scherer/"> Sebastian Scherer  </a>
-during my first year at CMU. We focused on applying deep learning for visual odometry estimation.
+<!-- I had the pleasure of working with Professor -->
+<!-- <a href="https://www.ri.cmu.edu/ri-faculty/sebastian-scherer/"> Sebastian Scherer  </a> -->
+<!-- during my first year at CMU. We focused on applying deep learning for visual odometry estimation. -->
 
-Previously, I was a student at MIT working in CSAIL at 
+Previously, I was at <a href="https://mitathletics.com/sports/mens-track-and-field/roster/yorai-shaoul/8900">MIT</a> working in CSAIL at 
 <a href="https://aeroastro.mit.edu/people/nicholas-roy/">Nicholas Roy's </a> 
 <a href="http://groups.csail.mit.edu/rrg/" >Robust Robotics Group </a>, and I was fortunate to <del>play with robots</del> spend time at 
 <a href="https://www.indoor-robotics.com/" >Indoor Robotics</a>, 
