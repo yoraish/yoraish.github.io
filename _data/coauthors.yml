@@ -13,3 +13,12 @@
 "Roy":
   - firstname: ["Nicholas", "Nick", "N."]
     url: https://aeroastro.mit.edu/people/nicholas-roy/
+"Mishani":
+  - firstname: ["Itamar", "I."]
+    url: https://imishani.github.io/
+"Likhachev":
+  - firstname: ["Maxim", "M."]
+    url: https://www.cs.cmu.edu/~maxim/
+"Lin":
+  - firstname: ["Jiaoyang", "J."]
+    url: https://jiaoyangli.me/
