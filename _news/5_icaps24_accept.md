@@ -13,5 +13,5 @@ Our paper *Accelerating Search-Based Planning for Multi-Robot Manipulation by Le
 </div> -->
 <br>
 <div style="text-align:center">
-<img src="assets/img/publication_preview/mramp.gif" alt="Alt text" title="Title" width="350" height="190">
+<img src="assets/img/publication_preview/mramp_orig.gif" alt="Alt text" title="Title" width="350">
 </div> 
