@@ -5,7 +5,7 @@ inline: true
 related_posts: true
 ---
 
-Our work on <a href="https://x-cbs.github.io/">motion planning for teams of robot arms</a> has won the **Best Student Paper Award** at <a href="https://icaps24.icaps-conference.org/home/">ICAPS 2024</a>! Exciting! 🤖 🎉 My collaborators and I are extremely grateful for this recognition.
+Our work on <a href="https://x-cbs.github.io/">motion planning for teams of robot arms</a> has won the <a href="https://icaps24.icaps-conference.org/program/awards/">**Best Student Paper Award** at ICAPS 2024</a>! Exciting! 🤖 🎉 My collaborators and I are extremely grateful for this recognition.
 
 <!-- <br>
 <div style="text-align:center">
