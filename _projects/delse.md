@@ -17,7 +17,7 @@ category: vision
     Starting with a bounding ellipsoid, DELSE fits the initial estimate to the partial observations via a free-form-deformation. Resulting in a well-fitted continuous and differentiable object shape representation.
 </div>
 
-It is often important for robots to know the location and shape of objects. However, this task can be a bit tricky! Many times robots can only obtain partial observations due to self-occlusions or occlusions in the scene. In this project (which is approximately equivalent to half of an undergraduate senior- year research project, with the other half being the [learned descriptors project](https://groups.csail.mit.edu/rrg/papers/shaoul_liu_ok_iros21_submission.pdf)), I have attempted to compute continuous and differentiable object shape representations from partial observations.
+It is often important for robots to know the location and shape of objects. However, this task can be a bit tricky! Many times robots can only obtain partial observations due to self-occlusions or occlusions in the scene. In this project (which is approximately equivalent to half of an undergraduate senior- year research project, with the other half being the [learned descriptors project](https://arxiv.org/abs/2011.10471f)), I have attempted to compute continuous and differentiable object shape representations from partial observations.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/4SWVREjLXW4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 

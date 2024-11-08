@@ -3,6 +3,20 @@
 
 % @string{aps = {American Physical Society,}}
 
+@article{shaoul2024multi,
+  title={Multi-Robot Motion Planning with Diffusion Models},
+  author={Shaoul*, Yorai and Mishani*, Itamar and Vats*, Shivam and Li, Jiaoyang and Likhachev, Maxim},
+  journal={Under review.},
+  preview={mmd.gif},
+  year={2024},
+  pdf={https://arxiv.org/pdf/2410.03072},
+  abstract={Diffusion models have recently been successfully applied to a wide range of robotics applications for learning complex multi-modal behaviors from data. However, prior works have mostly been confined to single-robot and small-scale environments due to the high sample complexity of learning multi-robot diffusion models. In this paper, we propose a method for generating collision-free multi-robot trajectories that conform to underlying data distributions while using only single-robot data. Our algorithm, Multi-robot Multi-model planning Diffusion (MMD), does so by combining learned diffusion models with classical search-based techniques -- generating data-driven motions under collision constraints. Scaling further, we show how to compose multiple diffusion models to plan in large environments where a single diffusion model fails to generalize well. We demonstrate the effectiveness of our approach in planning for dozens of robots in a variety of simulated scenarios motivated by logistics environments.},
+  code={https://github.com/yoraish/mmd},
+  bibtex_show={true},
+  selected={true}
+  }
+
+
 @article{loke2021digital,
   title={Digital electronics in fibres enable fabric-based machine-learning inference},
   author={Loke, Gabriel and Khudiyev, Tural and Wang, Brian and Fu, Stephanie and Payra, Syamantak and Shaoul, Yorai and Fung, Johnny and Chatziveroglou, Ioannis and Chou, Pin-Wen and Chinn, Itamar and Yan, Wei and Gitelson-Kahn, Anna and Joannopoulos, John and Fink, Yoel},
@@ -21,7 +35,7 @@
   author={Shaoul, Yorai and Liu, Katherine and Ok, Kyel and Roy, Nicholas},
   journal={arXiv preprint arXiv:2011.10471},
   year={2020},
-  pdf={https://groups.csail.mit.edu/rrg/papers/shaoul_liu_ok_iros21_submission.pdf},
+  pdf={https://arxiv.org/abs/2011.10471},
   preview={delta.png},
   selected={false}
 }
@@ -35,7 +49,8 @@
   html={https://x-cbs.github.io},
   preview={mramp.gif},
   selected={true},
-  pdf={https://arxiv.org/pdf/2404.00143.pdf}
+  pdf={https://arxiv.org/pdf/2404.00143.pdf},
+  abstract={An exciting frontier in robotic manipulation is the use of multiple arms at once. However, planning concurrent motions is a challenging task using current methods. The high-dimensional composite state space renders many well-known motion planning algorithms intractable. Recently, Multi-Agent Path-Finding (MAPF) algorithms have shown promise in discrete 2D domains, providing rigorous guarantees. However, widely used conflict-based methods in MAPF assume an efficient single-agent motion planner. This poses challenges in adapting them to manipulation cases where this assumption does not hold, due to the high dimensionality of configuration spaces and the computational bottlenecks associated with collision checking. To this end, we propose an approach for accelerating conflict-based search algorithms by leveraging their repetitive and incremental nature -- making them tractable for use in complex scenarios involving multi-arm coordination in obstacle-laden environments. We show that our method preserves completeness and bounded sub-optimality guarantees, and demonstrate its practical efficacy through a set of experiments with up to 10 robotic arms.},
 }
 
 @inproceedings{shaoul2024unconstraining,
@@ -48,28 +63,6 @@
   preview={gencbs.gif},
   year={2024},
   pdf={https://ojs.aaai.org/index.php/SOCS/article/view/31548/33708}
-}
-
-@book{einstein1956investigations,
-  bibtex_show={true},
-  title={Investiaaaagations on the Theory of the Brownian Movement},
-  author={Einstein, Albert},
-  year={1956},
-  publisher={Courier Corporation},
-  preview={brownian-motion.gif}
-}
-
-@article{einstein1950meaning,
-  abbr={AJP},
-  bibtex_show={true},
-  title={The meaning of relativity},
-  author={Einstein, Albert and Taub, AH},
-  journal={American Journal of Physics},
-  volume={18},
-  number={6},
-  pages={403--404},
-  year={1950},
-  publisher={American Association of Physics Teachers}
 }
 
 @article{PhysRev.47.777,
@@ -91,31 +84,4 @@
   pdf={example_pdf.pdf},
   altmetric={248277},
   dimensions={true},
-}
-
-@article{einstein1905molekularkinetischen,
-  title={{\"U}ber die von der molekularkinetischen Theorie der W{\"a}rme geforderte Bewegung von in ruhenden Fl{\"u}ssigkeiten suspendierten Teilchen},
-  author={Einstein, A.},
-  journal={Annalen der physik},
-  volume={322},
-  number={8},
-  pages={549--560},
-  year={1905},
-  publisher={Wiley Online Library}
-}
-
-@article{einstein1905movement,
-  abbr={Ann. Phys.},
-  title={Un the movement of small particles suspended in statiunary liquids required by the molecular-kinetic theory 0f heat},
-  author={Einstein, A.},
-  journal={Ann. Phys.},
-  volume={17},
-  pages={549--560},
-  year={1905}
-}
-
-@article{einstein1905electrodynamics,
-  title={On the electrodynamics of moving bodies},
-  author={Einstein, A.},
-  year={1905}
 }
