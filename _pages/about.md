@@ -4,7 +4,7 @@ title: about
 permalink: /
 # subtitle: Ph.D. Student at <a href="https://www.ri.cmu.edu/">The Robotics Institute </a>, Carnegie Mellon University. <a href="https://mitathletics.com/sports/mens-track-and-field/roster/yorai-shaoul/8900"> MIT 21'</a>. [<strong><a href="https://yoraish.wordpress.com/">Old website link</a></strong>]
 
-subtitle: [<strong><a href="https://yoraish.wordpress.com/">Old website link</a></strong>]
+# subtitle: [<strong><a href="https://yoraish.wordpress.com/">Old website link</a></strong>]
 
 profile:
   align: right

@@ -31,7 +31,7 @@
   type: time_table
   contents:
     - title: Researcher and Teaching Assistant
-      institution: Robotics Institute, Carnegie Mellon University
+      institution: <b>Robotics Institute, Carnegie Mellon University</b>
       year: 2022-
       description:
         - Assisting with teaching the graduate class <a href="https://www.cs.cmu.edu/~maxim/classes/robotplanning_grad/">Planning and Decision-Making in Robotics</a> (Fall 2024, Professor Maxim Likhachev).
@@ -66,11 +66,11 @@
 - title: Open Source Projects
   type: time_table
   contents:
-    - title: <a href="https://yoraish.com/projects/botello/">Aerial Robot with Camera Autonomy Stack</a>
+    - title: <a href="https://yoraish.com/projects/botello/">Aerial Robot with Visual Localization Autonomy Stack</a>
       year: 2022
       description: 
       - Endowing a DJI Tello Drone with autonomy using its onboard camera, ROS, and Aruco markers.
-    - title: <a href="https://yoraish.com/projects/lidarbot/">Ground Robot with LiDAR  Autonomy Stack</a>
+    - title: <a href="https://yoraish.com/projects/lidarbot/">Ground Robot with LiDAR SLAM Autonomy Stack</a>
       year: 2021
       description: 
       - An introductory tutorial-style resource for creating an autonomous ground robot with ROS.
