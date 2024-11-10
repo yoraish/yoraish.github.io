@@ -74,7 +74,7 @@
       year: 2021
       description: 
       - An introductory tutorial-style resource for creating an autonomous ground robot with ROS.
-      - This project has become quite popular among students and hobbyists. It inspired some projects [<a href="https://github.com/YoungKippur/NotNameBot">1</a>, <a href="https://www.hackster.io/361126/autonomous-uv-robot-with-slam-215203">2</a>] around the web and even got duplicated a few times [<a href="https://hackaday.io/project/180015/instructions">3</a>]! I take it as a big compliment :).
+      - This project has become quite popular among students and hobbyists, inspiring some projects shared online! [<a href="https://github.com/YoungKippur/NotNameBot">1</a>, <a href="https://www.hackster.io/361126/autonomous-uv-robot-with-slam-215203">2</a>, <a href="https://hackaday.io/project/180015/instructions">3</a>]
 
 - title: Honors and Awards
   type: time_table
