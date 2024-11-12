@@ -10,9 +10,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>DELSE | Yorai  Shaoul</title>
+    <title>10_xecbs_video | Yorai  Shaoul</title>
     <meta name="author" content="Yorai  Shaoul">
-    <meta name="description" content="Deforming Ellipsoids for object Shape Estimation">
+    <meta name="description" content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+">
     <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
 
 
@@ -38,7 +39,7 @@
     <link rel="shortcut icon" href="/assets/img/broken_gear.png">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://yoraish.com/projects/delse/">
+    <link rel="canonical" href="https://yoraish.com/news/10_xecbs_video/">
 
     <!-- Dark Mode -->
     
@@ -111,48 +112,31 @@
     <!-- Content -->
     <div class="container mt-5">
       
-        <!-- page.html -->
-        <div class="post">
+        <!-- _layouts/post.html -->
 
-          <header class="post-header">
-            <h1 class="post-title">DELSE</h1>
-            <p class="post-description">Deforming Ellipsoids for object Shape Estimation</p>
-          </header>
+<div class="post">
 
-          <article>
-            <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        <figure>
+  <header class="post-header">
+    <h1 class="post-title">10_xecbs_video</h1>
+    <p class="post-meta">November 12, 2024</p>
+    <p class="post-tags">
+      <a href="/blog/2024"> <i class="fas fa-calendar fa-sm"></i> 2024 </a>
 
-  <picture>
+    </p>
+  </header>
+
+  <article class="post-content">
     
+    <div id="markdown-content">
+      <p>We’ve released a video showcasing the <a href="https://x-cbs.github.io/" rel="external nofollow noopener" target="_blank">xECBS</a> algorithm. We briefly cover the algorithm and show real-robot demonstrations 🦾🤖.<br></p>
 
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/delse_fig3d.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="DELSE overview image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
+<!-- Center the video below. -->
+<div style="text-align:center">
+<iframe width="350" height="190" src="https://www.youtube.com/embed/jC4YptgxpqU?si=qht_PJ7Fr7n1_RYF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe> </div>
 
     </div>
+  </article>
 </div>
-<div class="caption">
-    Starting with a bounding ellipsoid, DELSE fits the initial estimate to the partial observations via a free-form-deformation. Resulting in a well-fitted continuous and differentiable object shape representation.
-</div>
-
-<p>It is often important for robots to know the location and shape of objects. However, this task can be a bit tricky! Many times robots can only obtain partial observations due to self-occlusions or occlusions in the scene. In this project (which is approximately equivalent to half of an undergraduate senior- year research project, with the other half being the <a href="https://arxiv.org/abs/2011.10471f" rel="external nofollow noopener" target="_blank">learned descriptors project</a>), I have attempted to compute continuous and differentiable object shape representations from partial observations.</p>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/4SWVREjLXW4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
-
-<p>Past works have attempted to learn object shapes from incomplete data via vast training datasets. While effective for previously known and well defined objects (e.g., cars and bottles), these methods could fall short when estimating shapes of arbitrary objects (e.g. rocks or deformed packages). In this work I have leveraged past work on computing ellipsoid shape estimates to objects and designed a method that further improves on such coarse estimates by deforming the prior ellipsoids to tightly fit partial observations while retaining a reasonable volume and without relying on prior shape or semantic knowledge.</p>
-
-<p>That’s it, in a nutshell!  The method in some more detail is outlined in the video and described in much much more detail is described <a href="/assets/pdf/shaoul2021deforming.pdf">in the PDF 🤖</a>.</p>
-
-<!-- [googleapps domain="drive" dir="file/d/1oCYbFPSyqKZVOFY3h2OM2I9ELgc7y0ck/preview" query="" width="640" height="480" /] -->
-
-          </article>
-
-        </div>
 
       
     </div>
