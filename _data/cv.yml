@@ -17,7 +17,7 @@
       description:
         - title: Algorithmic foundations for multi-robot systems.
           contents:
-            - Incorporating generative models with graph search for flexible and efficient multi-robot coordination.
+            - Incorporating learned models (e.g., diffusion models) with graph search for flexible and efficient multi-robot coordination.
             - Applying my work to multi-arm manipulation.
             - <a href="http://yoraish.com/publications/">Publications.</a>
 
@@ -35,7 +35,7 @@
       year: 2022-
       description:
         - Assisting with teaching the graduate class <a href="https://www.cs.cmu.edu/~maxim/classes/robotplanning_grad/">Planning and Decision-Making in Robotics</a> (Fall 2024, Professor Maxim Likhachev).
-        - Researching multi-robot coordination and manipulation primarily using graph search and generative models.
+        - Researching multi-robot coordination and manipulation via interleaving data-driven methods with classical planning.
     - title: Algorithm Engineer
       institution: <b>Indoor Robotics</b>
       year: 2022-2023
