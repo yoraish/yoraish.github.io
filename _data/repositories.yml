@@ -1,9 +1,9 @@
-github_users:
-  - yoraish
+#github_users:
+#  - yoraish
 
 github_repos:
+  - yoraish/mmd
   - yoraish/lidar_bot
   - yoraish/botello
   - castacks/tartanairpy
   - contagon/NeRFish
-  - yoraish/robot_utils
