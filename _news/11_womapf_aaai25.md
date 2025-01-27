@@ -8,7 +8,7 @@ related_posts: true
   <div>    <img src="/assets/img/publication_preview/mmd_conveyor.gif" alt="MMD Conveyor Animation" style="width: 200px; height: auto;">
     </div>
   <div>
-    <p>We are honored to have our paper <a href="https://github.com/yoraish/mmd/">Multi-Robot Planning with Diffusion Models</a> <b>accepted to <a href="https://iclr.cc/">ICLR 2025</a>!</b>  Collaborators and I will also be presenting our work at the AAAI 2025 <a href="https://womapf.github.io/aaai-25/">Workshop on Multi-Agent Path Finding</a>.</p>
+    <p>We are honored to have our paper <a href="https://multi-robot-diffusion.github.io/">Multi-Robot Planning with Diffusion Models</a> <b>accepted to <a href="https://iclr.cc/">ICLR 2025</a>!</b>  Collaborators and I will also be presenting our work at the AAAI 2025 <a href="https://womapf.github.io/aaai-25/">Workshop on Multi-Agent Path Finding</a>.</p>
     <p>See you in Singapore and Philadelphia!</p>
   </div>
 </div>
