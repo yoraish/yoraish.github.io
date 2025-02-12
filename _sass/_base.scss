@@ -948,3 +948,13 @@ nav[data-toggle="toc"] {
   }
 }
 
+.highlighted-text {
+  background-color: #fff6ab; /* Softer yellow background */
+  padding: 4px 8px; /* Padding around the text */
+  border-radius: 5px; /* Rounded corners */
+  font-weight: bold; /* Bold text */
+  display: inline-block; /* Inline block to fit the text */
+  margin-top: 8px; /* Margin to separate from other elements */
+  color: #333; /* Darker text color for better contrast */
+  border: 1px solid #ffeb3b; /* Border color to complement the background */
+}

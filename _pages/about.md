@@ -10,7 +10,7 @@ profile:
   align: right
   image: yoraibike.jpg
   image_circular: false # crops the image to make it circular
-  address:  <p><iframe width="240" height="130" src="https://www.youtube.com/embed/UUp8TxYBdNY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> <br> I like to jump, and I was even decent at it :)</p>
+  address:  <p><iframe width="240" height="130" src="https://www.youtube.com/embed/UUp8TxYBdNY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> <br></p>
 
 news: true  # includes a list of news items
 latest_posts: false  # includes a list of the newest posts
