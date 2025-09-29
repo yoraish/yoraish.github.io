@@ -36,6 +36,11 @@
       description:
         - Assisting with teaching the graduate class <a href="https://www.cs.cmu.edu/~maxim/classes/robotplanning_grad/">Planning and Decision-Making in Robotics</a> (Fall 2024, Professor Maxim Likhachev).
         - Researching multi-robot coordination and manipulation via interleaving data-driven methods with classical planning.
+    - title: Applied Scientist II
+      institution: <b>Amazon Robotics</b>
+      year: 2025
+      description:
+        - Applied Scientist internship focusing on generative modeling and large scale planning for multi-robot collaboration.
     - title: Algorithm Engineer
       institution: <b>Indoor Robotics</b>
       year: 2022-2023
@@ -87,6 +92,22 @@
       items: 
         - MIT triple jump record holder, NCAA (DIII) Indoor/Outdoor national champion, National team (ISR).
         - I was fortunate to win some awards when at MIT- <a href="https://mitathletics.com/sports/mens-track-and-field/roster/yorai-shaoul/8900">summary.</a>
+
+- title: Paper Reviewer
+  type: nested_list
+  contents:
+    - title: Conferences
+      items:
+        - IEEE Robotics and Automation Letters (RA-L)
+        - IEEE Transactions on Robotics (T-RO)
+        - International Conference on Automated Planning and Scheduling (ICAPS)
+        - International Conference on Robotics and Automation (ICRA)
+        - IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)
+    - title: Journals
+      items:
+        - IEEE Robotics and Automation Letters (RA-L)
+        - IEEE Transactions on Robotics (T-RO)
+        - Journal of Artificial Intelligence Research (JAIR)
 
 # - title: Academic Interests
 #   type: nested_list
