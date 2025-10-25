@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://yoraish.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://yoraish.com/" rel="alternate" type="text/html" hreflang="en" /><updated>2025-10-10T14:38:20+00:00</updated><id>https://yoraish.com/feed.xml</id><title type="html">blank</title><subtitle>A personal webpage with research and robots.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://yoraish.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://yoraish.com/" rel="alternate" type="text/html" hreflang="en" /><updated>2025-10-25T09:46:26+00:00</updated><id>https://yoraish.com/feed.xml</id><title type="html">blank</title><subtitle>A personal webpage with research and robots.
 </subtitle><entry><title type="html">Shortest Path to Learn C++ (and A*)</title><link href="https://yoraish.com/blog/2024/learn-cpp-astar/" rel="alternate" type="text/html" title="Shortest Path to Learn C++ (and A*)" /><published>2024-10-27T14:14:00+00:00</published><updated>2024-10-27T14:14:00+00:00</updated><id>https://yoraish.com/blog/2024/learn-cpp-astar</id><content type="html" xml:base="https://yoraish.com/blog/2024/learn-cpp-astar/"><![CDATA[<h1 id="the-shortest-path-to-learn-c-and-a-a-brief-recap">The Shortest Path to Learn C++ (and A*): A Brief Recap</h1>
 
 <blockquote>
@@ -421,6 +421,13 @@ We’ll use a class to represent a planning algorithm in our program, and a deri
       <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>
   <span class="p">}</span>
 </code></pre></div>    </div>
+    <p>If we wanted to compare the f-values of two <code class="language-plaintext highlighter-rouge">SearchState</code> objects, for example, we could overload the <code class="language-plaintext highlighter-rouge">&lt;</code> operator in the struct itself.</p>
+    <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kt">bool</span> <span class="k">operator</span><span class="o">&lt;</span><span class="p">(</span><span class="k">const</span> <span class="n">SearchState</span><span class="o">&amp;</span> <span class="n">other</span><span class="p">)</span> <span class="k">const</span>
+  <span class="p">{</span>
+      <span class="k">return</span> <span class="n">other</span><span class="p">.</span><span class="n">f</span> <span class="o">&lt;</span> <span class="n">f</span><span class="p">;</span>
+  <span class="p">}</span>
+</code></pre></div>    </div>
+    <p>We won’t do it here today though since we will be working with pointers.</p>
   </li>
   <li><strong>Default Arguments</strong>: You can provide default values for function parameters. If a value is not provided when the function is called, the default value will be used.
     <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kt">int</span> <span class="nf">add</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
@@ -429,11 +436,15 @@ We’ll use a class to represent a planning algorithm in our program, and a deri
   <span class="p">}</span>
 </code></pre></div>    </div>
   </li>
-  <li><strong>Operator Overloading</strong>: C++ allows you to redefine the behavior of operators for user-defined types. This is called operator overloading. For example, in our implementation we will define the <code class="language-plaintext highlighter-rouge">&lt;</code> operator for the <code class="language-plaintext highlighter-rouge">SearchState</code> struct to compare states based on their <code class="language-plaintext highlighter-rouge">f</code> values. (We negate the f-values to make the priority queue, which is normally a max-heap, a min-heap.)
-    <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kt">bool</span> <span class="k">operator</span><span class="o">&lt;</span><span class="p">(</span><span class="k">const</span> <span class="n">SearchState</span><span class="o">&amp;</span> <span class="n">other</span><span class="p">)</span> <span class="k">const</span>
-  <span class="p">{</span>
-      <span class="k">return</span> <span class="o">-</span><span class="n">f</span> <span class="o">&lt;</span> <span class="o">-</span><span class="n">other</span><span class="p">.</span><span class="n">f</span><span class="p">;</span>
-  <span class="p">}</span>
+  <li>
+    <p><strong>Custom Comparators</strong>: When using <code class="language-plaintext highlighter-rouge">std::priority_queue</code> with custom types, we need to provide a way to compare elements. We create a dedicated comparator struct that tells the priority queue how to order elements based on their <code class="language-plaintext highlighter-rouge">f</code> values.</p>
+
+    <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">struct</span> <span class="nc">SearchStatePtrComparator</span> <span class="p">{</span>
+      <span class="kt">bool</span> <span class="k">operator</span><span class="p">()(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">SearchState</span><span class="o">&gt;&amp;</span> <span class="n">lhs</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">SearchState</span><span class="o">&gt;&amp;</span> <span class="n">rhs</span><span class="p">)</span> <span class="k">const</span> <span class="p">{</span>
+          <span class="c1">// Returns true if lhs should be popped before rhs.</span>
+          <span class="k">return</span> <span class="n">lhs</span><span class="o">-&gt;</span><span class="n">f</span> <span class="o">&gt;</span> <span class="n">rhs</span><span class="o">-&gt;</span><span class="n">f</span><span class="p">;</span>
+      <span class="p">}</span>
+  <span class="p">};</span>
 </code></pre></div>    </div>
     <p>Note that the <code class="language-plaintext highlighter-rouge">const</code> keyword at the end of the function declaration means that the function does not modify the object it is called on. The “const reference” <code class="language-plaintext highlighter-rouge">other</code> is explained next.</p>
   </li>
@@ -524,6 +535,14 @@ We’ll use a class to represent a planning algorithm in our program, and a deri
 <p>In fact, since we will be making use of this pointer quite a bit, we’ll create an alias for it to make our code more readable.</p>
 
 <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="n">SearchStatePtr</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">SearchState</span><span class="o">&gt;</span><span class="p">;</span>
+
+<span class="c1">// Comparator for search state pointer.</span>
+<span class="k">struct</span> <span class="nc">SearchStatePtrComparator</span> <span class="p">{</span>
+    <span class="kt">bool</span> <span class="k">operator</span><span class="p">()(</span><span class="k">const</span> <span class="n">SearchStatePtr</span><span class="o">&amp;</span> <span class="n">lhs</span><span class="p">,</span> <span class="k">const</span> <span class="n">SearchStatePtr</span><span class="o">&amp;</span> <span class="n">rhs</span><span class="p">)</span> <span class="k">const</span> <span class="p">{</span>
+        <span class="c1">// Returns true if lhs should be popped before rhs.</span>
+        <span class="k">return</span> <span class="n">lhs</span><span class="o">-&gt;</span><span class="n">f</span> <span class="o">&gt;</span> <span class="n">rhs</span><span class="o">-&gt;</span><span class="n">f</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
 </code></pre></div></div>
 
 <hr />
@@ -547,14 +566,17 @@ We’ll use a class to represent a planning algorithm in our program, and a deri
     <span class="kt">int</span> <span class="n">f</span><span class="p">;</span>
     <span class="n">Position</span> <span class="n">pos</span><span class="p">;</span>
     <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">SearchState</span><span class="o">&gt;</span> <span class="n">parent</span><span class="p">;</span>
-
-    <span class="kt">bool</span> <span class="k">operator</span><span class="o">&lt;</span><span class="p">(</span><span class="k">const</span> <span class="n">SearchState</span><span class="o">&amp;</span> <span class="n">rhs</span><span class="p">)</span> <span class="k">const</span> <span class="p">{</span>
-        <span class="c1">// To accommodate the priority queue, which is a max heap by default.</span>
-        <span class="k">return</span> <span class="o">-</span><span class="n">f</span> <span class="o">&lt;</span> <span class="o">-</span><span class="n">rhs</span><span class="p">.</span><span class="n">f</span><span class="p">;</span>
-    <span class="p">}</span>
 <span class="p">};</span>
 
 <span class="k">using</span> <span class="n">SearchStatePtr</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">SearchState</span><span class="o">&gt;</span><span class="p">;</span>
+
+<span class="c1">// Comparator for search state pointer.</span>
+<span class="k">struct</span> <span class="nc">SearchStatePtrComparator</span> <span class="p">{</span>
+    <span class="kt">bool</span> <span class="k">operator</span><span class="p">()(</span><span class="k">const</span> <span class="n">SearchStatePtr</span><span class="o">&amp;</span> <span class="n">lhs</span><span class="p">,</span> <span class="k">const</span> <span class="n">SearchStatePtr</span><span class="o">&amp;</span> <span class="n">rhs</span><span class="p">)</span> <span class="k">const</span> <span class="p">{</span>
+        <span class="c1">// Returns true if lhs should be popped before rhs.</span>
+        <span class="k">return</span> <span class="n">lhs</span><span class="o">-&gt;</span><span class="n">f</span> <span class="o">&gt;</span> <span class="n">rhs</span><span class="o">-&gt;</span><span class="n">f</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
 
 <span class="k">class</span> <span class="nc">Planner</span> <span class="p">{</span>
 <span class="nl">public:</span>
@@ -710,9 +732,9 @@ Checking if an element is in an unordered set can be done in constant time.</p>
   </li>
   <li>
     <p><strong><code class="language-plaintext highlighter-rouge">std::priority_queue</code></strong>:
-A priority queue is a data structure that stores elements in a sorted order. When elements are added to the queue, they are placed in the correct position based on their priority. The element with the highest priority is at the front of the queue. In our implementation, we will use a priority queue to store the open list of states to explore. The priority queue will make use of the <code class="language-plaintext highlighter-rouge">&lt;</code> operator we defined for the <code class="language-plaintext highlighter-rouge">SearchState</code> struct to order the states based on their <code class="language-plaintext highlighter-rouge">f</code> values.</p>
+A priority queue is a data structure that stores elements in a sorted order. When elements are added to the queue, they are placed in the correct position based on their priority. The element with the highest priority is at the front of the queue. In our implementation, we will use a priority queue to store the open list of states to explore. The priority queue uses a custom comparator to order the states based on their <code class="language-plaintext highlighter-rouge">f</code> values.</p>
 
-    <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">std</span><span class="o">::</span><span class="n">priority_queue</span><span class="o">&lt;</span><span class="n">SearchStatePtr</span><span class="o">&gt;</span> <span class="n">open_list</span><span class="p">;</span>
+    <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">std</span><span class="o">::</span><span class="n">priority_queue</span><span class="o">&lt;</span><span class="n">SearchStatePtr</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">SearchStatePtr</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">SearchStatePtrComparator</span><span class="o">&gt;</span> <span class="n">open_list</span><span class="p">;</span>
 </code></pre></div>    </div>
 
     <p>We can access the element with the highest priority in constant time with the <code class="language-plaintext highlighter-rouge">top</code> method. We can add elements to the queue with the <code class="language-plaintext highlighter-rouge">push</code> method and remove elements with the <code class="language-plaintext highlighter-rouge">pop</code> method.</p>
@@ -789,7 +811,7 @@ C++ has introduce, since C++11, a class of objects called smart pointers. These 
 <span class="p">}</span>
 
 <span class="p">...</span>
-    <span class="n">std</span><span class="o">::</span><span class="n">priority_queue</span><span class="o">&lt;</span><span class="n">SearchStatePtr</span><span class="o">&gt;</span> <span class="n">open_</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">priority_queue</span><span class="o">&lt;</span><span class="n">SearchStatePtr</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">SearchStatePtr</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">SearchStatePtrComparator</span><span class="o">&gt;</span> <span class="n">open_</span><span class="p">;</span>
     <span class="n">std</span><span class="o">::</span><span class="n">unordered_set</span><span class="o">&lt;</span><span class="n">Position</span><span class="o">&gt;</span> <span class="n">closed_</span><span class="p">;</span>
 <span class="p">...</span>
 </code></pre></div></div>
@@ -829,14 +851,17 @@ C++ has introduce, since C++11, a class of objects called smart pointers. These 
     <span class="kt">int</span> <span class="n">f</span><span class="p">;</span>
     <span class="n">Position</span> <span class="n">pos</span><span class="p">;</span>
     <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">SearchState</span><span class="o">&gt;</span> <span class="n">parent</span><span class="p">;</span>
-
-    <span class="kt">bool</span> <span class="k">operator</span><span class="o">&lt;</span><span class="p">(</span><span class="k">const</span> <span class="n">SearchState</span><span class="o">&amp;</span> <span class="n">rhs</span><span class="p">)</span> <span class="k">const</span> <span class="p">{</span>
-        <span class="c1">// To accommodate the priority queue, which is a max heap by default.</span>
-        <span class="k">return</span> <span class="o">-</span><span class="n">f</span> <span class="o">&lt;</span> <span class="o">-</span><span class="n">rhs</span><span class="p">.</span><span class="n">f</span><span class="p">;</span>
-    <span class="p">}</span>
 <span class="p">};</span>
 
 <span class="k">using</span> <span class="n">SearchStatePtr</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">SearchState</span><span class="o">&gt;</span><span class="p">;</span>
+
+<span class="c1">// Comparator for search state pointer.</span>
+<span class="k">struct</span> <span class="nc">SearchStatePtrComparator</span> <span class="p">{</span>
+    <span class="kt">bool</span> <span class="k">operator</span><span class="p">()(</span><span class="k">const</span> <span class="n">SearchStatePtr</span><span class="o">&amp;</span> <span class="n">lhs</span><span class="p">,</span> <span class="k">const</span> <span class="n">SearchStatePtr</span><span class="o">&amp;</span> <span class="n">rhs</span><span class="p">)</span> <span class="k">const</span> <span class="p">{</span>
+        <span class="c1">// Returns true if lhs should be popped before rhs.</span>
+        <span class="k">return</span> <span class="n">lhs</span><span class="o">-&gt;</span><span class="n">f</span> <span class="o">&gt;</span> <span class="n">rhs</span><span class="o">-&gt;</span><span class="n">f</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
 
 <span class="k">class</span> <span class="nc">Planner</span> <span class="p">{</span>
 <span class="nl">public:</span>
@@ -849,7 +874,7 @@ C++ has introduce, since C++11, a class of objects called smart pointers. These 
 <span class="nl">private:</span>
     <span class="c1">// Variables.</span>
     <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="n">grid_</span><span class="p">;</span>
-    <span class="n">std</span><span class="o">::</span><span class="n">priority_queue</span><span class="o">&lt;</span><span class="n">SearchStatePtr</span><span class="o">&gt;</span> <span class="n">open_</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">priority_queue</span><span class="o">&lt;</span><span class="n">SearchStatePtr</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">SearchStatePtr</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">SearchStatePtrComparator</span><span class="o">&gt;</span> <span class="n">open_</span><span class="p">;</span>
     <span class="n">std</span><span class="o">::</span><span class="n">unordered_set</span><span class="o">&lt;</span><span class="n">Position</span><span class="o">&gt;</span> <span class="n">closed_</span><span class="p">;</span>
     
     <span class="c1">// Methods.</span>
